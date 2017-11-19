@@ -1,0 +1,22 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+body {
+  font-family: 'Jeju Hallasan', serif;
+}
+
+.contents {
+  width: auto;
+  height: 700px;
+  background-image: url("../resource/versus_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.main {
+  background-color: black;
+
+}
