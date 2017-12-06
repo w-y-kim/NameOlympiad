@@ -6,6 +6,11 @@ body {
   background-color: black;
 }
 
+.dtable {
+  font-family: 'serif', serif;
+  background-color: white;
+}
+
 .contents {
   width: auto;
   height: 700px;

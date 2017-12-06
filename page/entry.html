@@ -12,10 +12,12 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="./js/main.js" charset="utf-8"></script>
-    <script src="./js/event.js" charset="utf-8"></script>
+    <script src="../js/main.js" charset="utf-8"></script>
+    <script src="../js/event.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../lib/DataTables/datatables.min.js"></script>
 
     <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" type="text/css" href="../lib/DataTables/datatables.min.css"/>
 
   </head>
   <body>
@@ -60,13 +62,18 @@
           선택해주세요
           <div class="info"></div>
         </div>
-        <div class="contents">
-             <script async defer src="https://apis.google.com/js/api.js"
+        <div class="contents2" style="background-color:white;margin:50px;">
+          <ul class="list">
+          </ul>
+          <table class="dtable" id="listTable">
+          </table>
+             <!-- <script async defer src="https://apis.google.com/js/api.js"
                onload="this.onload=function(){};handleClientLoad()"
                onreadystatechange="if (this.readyState === 'complete') this.onload()">
              </script>
              <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-             <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+             <button id="signout-button" onclick="handleSignOutClick()">Sign out</button> -->
+
         </div>
         <div class="footer">
           <div class="table"></div>
@@ -74,4 +81,5 @@
       </div>
     </div>
   </body>
+<script src="../js/entry.js" charset="utf-8"></script>
 </html>

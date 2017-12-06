@@ -3,7 +3,7 @@
   var _define = _define || {}
 
   _define = {
-    var entry = new ('#');
+//    var entry = new ('#');
   }
 
   function MainModule(options){
@@ -23,7 +23,7 @@
 
     _setElement(me);
 
-    handleClientLoad();
+  //  handleClientLoad();
   };
 
 

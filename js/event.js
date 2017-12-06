@@ -19,7 +19,7 @@
   // Header ※モジュールに関数を継承する。
   // 함수 승계라는데... 프로토타입으로 엘리먼트에 구현할 함수명을 미리 정의함
   // 다른 패턴에서도 prototype으로 붙여야지 export시켜서 다른 곳에서 호출해 사용가능
-  Gase['prototype']['constructor'] = EventModule;
+  EventModule['prototype']['constructor'] = EventModule;
 
 
   //event definition
@@ -30,16 +30,16 @@
   });
 
   /*
-  */
-  $('#signin-button').on('click',funtion(){
+
+  $('#signin-button').on('click', funtion() {
     handleSignInClick();
   });
   /*
-  */
+
   $('#signout-button').on('click',funtion(){
     handleSignOutClick();
   });
-
+  */
   // ------------------------------------------------------
   // Exports ※モジュール生成
   // ------------------------------------------------------
