@@ -59,31 +59,47 @@
             </div>
           </nav>
 
-          선택해주세요
-          <div class="info"></div>
+        <div class="info"></div>
         </div>
+
+<div>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <label for="inputEmail3" class="col-sm-2 control-label">이름</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="name" placeholder="이름후보를 적어주세요">
+      </div>
+    </div> <div class="form-group">
+      <label for="" class="col-sm-2 control-label">의미</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="meaning" placeholder="의미를 적어주세요">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12">
+         <button type="button" id="btn_enroll" class="btn btn-primary">등록</button>
+      </div>
+    </div>
+  </form>
+
+</div>
+
         <div class="contents2" style="background-color:white;margin:50px;">
-          <ul class="list">
-          </ul>
+
+
            <table class="dtable" id="listTable">
             <thead>
-              <tr>
-              <th>번호</th>
-              <th>후보</th>
-              <th>의미</th>
-              <th>제안자</th>
-              </tr>
             </thead>
             <tbody>
               <tr>
               </tr>
             </tbody>
-            <tfoot>
+            <!-- <tfoot>
               <tr>번호</tr>
               <tr>후보</tr>
               <tr>의미</tr>
               <tr>제안자</tr>
-            </tfoot>
+            </tfoot> -->
           </table>
              <!-- <script async defer src="https://apis.google.com/js/api.js"
                onload="this.onload=function(){};handleClientLoad()"
@@ -100,4 +116,5 @@
     </div>
   </body>
 <script src="../js/entry.js" charset="utf-8"></script>
+
 </html>
