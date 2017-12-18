@@ -1,4 +1,7 @@
+
 $(function(){
+
+
   $('#search').on('click',function(){
     var tag = $('input.form-control').val();
     var url = 'https://trends.google.co.kr/trends/explore?q='+tag;
@@ -13,13 +16,14 @@ $(function(){
       alert('취득실패');
       return;
     }
-debugger
+
     $.ajax({
-      url : "https://script.google.com/macros/s/AKfycbyXhOd7wRwiRdeGchg2-FqumSr7qju3IbmF-_Yqf8pfAx-9hkZq/exec ",
+      url: "https://script.google.com/macros/s/AKfycbxdPb82dkHZdC800E42nZ0PAZpgvdJ60agGJV2JPVRjh6mY_-H-/exec",
       data : {
-        no:"",
+        no:" ",
         name : $name,
         meaning : $meaning,
+        score: "1",
         writer : "admin"
       },
       type : "POST",

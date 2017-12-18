@@ -14,14 +14,14 @@ var commonTag = multiline(function(){
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
      </button>
-      <a class="navbar-brand" href="./index.html">올림피아드</a>
+      <a class="navbar-brand" href="./home.html">올림피아드</a>
     </div>
     <div class="collapse navbar-collapse" id="mynav">
       <ul class="nav navbar-nav">
-        <li id="home" class="menu active"><a href="./index.html"><span class="glyphicon glyphicon-home"> 홈</a></li>
-        <li id="entry" class="menu inactive"><a href="./page/entry.html"><span class="glyphicon glyphicon-edit"></span> 후보등록</a></li>
-        <li id="match" class="menu inactive"><a href="./page/match.html"><span class="glyphicon glyphicon-flag"></span> 경기수행</a></li>
-        <li id="result" class="menu inactive"><a href="./page/result.html"><span class="glyphicon glyphicon-tasks"></span> 결과보기</a></li>
+        <li id="home" class="menu active"><a href="./home.html"><span class="glyphicon glyphicon-home"> 홈</a></li>
+        <li id="entry" class="menu inactive"><a href="./entry.html"><span class="glyphicon glyphicon-edit"></span> 후보등록</a></li>
+        <li id="match" class="menu inactive"><a href="./match.html"><span class="glyphicon glyphicon-flag"></span> 경기수행</a></li>
+        <li id="result" class="menu inactive"><a href="./result.html"><span class="glyphicon glyphicon-tasks"></span> 결과보기</a></li>
 
 
       </ul>
@@ -60,7 +60,7 @@ $(document).ready(function(){
 
   var tabID = $('div.header').data('tab');
   var menuArr = $('ul.nav li.menu');
-  
+
   // for(var i = 0; i < menuArr.length; i++) {
   //   menuArr[i].removeClass();
   //   var id = menuArr[i].attr('id');
@@ -70,13 +70,14 @@ $(document).ready(function(){
   //     menuArr[i].addClass('inactive');
   //   }
   // }
-  $(menuArr).each(function(index, item) {
-    item.removeClass();
-    var id = item.attr('id');
+  $(menuArr).each(function() {
+    $(this).removeClass();
+    var id = $(this).attr('id');
     if(tabID==id) {
-      item.addClass('active');
+
+      $(this).addClass('active');
     }else {
-      item.addClass('inactive');
+      $(this).addClass('inactive');
     }
   });
 });

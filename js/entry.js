@@ -66,23 +66,22 @@ var data2 = [
         "2011/07/25",
         "$5,300"
     ]
-]
+];
 //insert
 //참고 : http://nubiz.tistory.com/538
 //구글 시트의 ｇｓ스크립트에 정의한 구글스크립트프로그램이 호출함
 //그 웹앱이 사용자의 ajax호출을 통해 받은 파라미터를 구글시트에 저장
-$.ajax({
-  url: "https://script.google.com/macros/s/AKfycbyXhOd7wRwiRdeGchg2-FqumSr7qju3IbmF-_Yqf8pfAx-9hkZq/exec",
-  data: {
-    no:" ",
-    name:"test",
-    meaning: "good",
-    score: "1",
-    writer: "admin"
-  },
-  type: "POST"
-});
-
+// $.ajax({
+//   url: "https://script.google.com/macros/s/AKfycbyXhOd7wRwiRdeGchg2-FqumSr7qju3IbmF-_Yqf8pfAx-9hkZq/exec",
+//   data: {
+//     no:" ",
+//     name:"test",
+//     meaning: "good",
+//     score: "1",
+//     writer: "admin"
+//   },
+//   type: "POST"
+// });
 
 //read
 //https://docs.google.com/spreadsheets/d/e/2PACX-1vRTGLh60JFm3ZX6EzwfBvaOiLikSMPOo4VFJwBEpMhrbNJS1pxMGCfCh7naB2XFgI-SjsTEoh-HIGRm/pubhtml
@@ -90,10 +89,11 @@ $.ajax({
 //https://spreadsheets.google.com/tq?tqx=out:html&tq=&key=2PACX-1vRTGLh60JFm3ZX6EzwfBvaOiLikSMPOo4VFJwBEpMhrbNJS1pxMGCfCh7naB2XFgI-SjsTEoh-HIGRm
 //list
 //https://spreadsheets.google.com/feeds/list/1SrtY3mZI4jNo19CXBvsoHuxObLVEpxKoP_IgEaSntuw/1/public/basic?alt=json-in-script
-
+// https://docs.google.com/spreadsheets/d/1Yo--J8m9K9PpXODg1drOrmQLsVJeCFEMyvYJNADnS-4/edit#gid=0
 //1.리스트로받음,객체긴객체인데 정작 데이터는 열구분 없이 하나의 프로퍼티 안에 스트링으로 들어있는 듯,아닐수도있고...
-var sheetId = '1SrtY3mZI4jNo19CXBvsoHuxObLVEpxKoP_IgEaSntuw';
+var sheetId = '1Yo--J8m9K9PpXODg1drOrmQLsVJeCFEMyvYJNADnS-4';
 var GSSurl = "https://spreadsheets.google.com/feeds/list/"+ sheetId +"/1/public/basic?alt=json-in-script&callback=?";
+
 //2.셀로 받음
 //var GSSurl = "https://spreadsheets.google.com/feeds/cells/1SrtY3mZI4jNo19CXBvsoHuxObLVEpxKoP_IgEaSntuw/1/public/basic?alt=json-in-script&callback=?";
 
@@ -105,7 +105,7 @@ $.getJSON(GSSurl,function(result){
     var i = 0;
     var arryList = [];
     var list = item.content.$t;
-    var arr = list.split(',')
+    var arr = list.split(',');
 
     for(var a=0;a<arr.length;a++){
 
@@ -113,7 +113,7 @@ $.getJSON(GSSurl,function(result){
       arryList.push(val[1]);
     }
     totalist.push(arryList);
-  })
+  });
 console.log(totalist);
   // $('div.contents').text(entry);
 
@@ -134,15 +134,15 @@ console.log(totalist);
   // // debugger;
 
   $('#listTable').DataTable({
-      data: totalist
-     ,columns: [
-          { title: "이름" }
-         ,{ title: "의미" }
-         ,{ title: "점수" }
-         ,{ title: "작성자"}
-         ,{ title: "시간"}
-      ]
-      ,"oLanguage" : {
+      data: totalist,
+      columns: [
+        { title: "이름" },
+         { title: "의미" },
+         { title: "점수" },
+         { title: "작성자"},
+         { title: "시간"}
+      ],
+      "oLanguage" : {
                 "sProcessing" : "처리 중...",
                 "sZeroRecords" : "データはありません。",
                 "sLengthMenu" : " _MENU_ 건씩",
